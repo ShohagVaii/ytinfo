@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Metadata Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>YouTube Video Metadata Extractor</h1>
+        
+        <!-- ভিডিও URL ইনপুট -->
+        <div class="input-container">
+            <label for="videoUrl">ভিডিও URL:</label>
+            <input type="text" id="videoUrl" placeholder="ভিডিও URL এখানে দিন">
+            <button id="fetchInfo">তথ্য নিন</button>
+        </div>
+        
+        <!-- লোডিং অ্যানিমেশন -->
+        <div id="loading" class="hidden">
+            <span>লোড হচ্ছে...</span>
+        </div>
+
+        <!-- ত্রুটি মেসেজ -->
+        <div id="error" class="hidden">
+            <span class="error-message"></span>
+        </div>
+
+        <!-- ভিডিও তথ্য শো করানোর জায়গা -->
+        <div id="videoInfo" class="hidden">
+            <h2>ভিডিও তথ্য</h2>
+            <img id="thumbnail" src="" alt="Thumbnail">
+            <p><strong>শিরোনাম:</strong> <span id="title"></span> <span class="copy-icon" data-copy="#title">📋</span></p>
+            <p><strong>বিবরণ:</strong> <span id="description"></span> <span class="copy-icon" data-copy="#description">📋</span></p>
+            <p><strong>ভিউ সংখ্যা:</strong> <span id="viewCount"></span></p>
+            <p><strong>লাইক সংখ্যা:</strong> <span id="likeCount"></span></p>
+            <p><strong>ডিসলাইক সংখ্যা:</strong> <span id="dislikeCount"></span></p>
+            <p><strong>লাইক রেশিও:</strong> <span id="likeRatio"></span></p>
+            <p><strong>মন্তব্য সংখ্যা:</strong> <span id="commentCount"></span></p>
+            <p><strong>প্রকাশিত হয়েছে:</strong> <span id="publishedAt"></span></p>
+            <p><strong>ভিডিওর দৈর্ঘ্য:</strong> <span id="duration"></span></p>
+            <p><strong>ট্যাগ:</strong> <span id="tags"></span></p>
+            <p><strong>লাইভ স্ট্যাটাস:</strong> <span id="liveStatus"></span></p>
+            <p><strong>ভিডিও স্ট্যাটাস:</strong> <span id="videoStatus"></span></p>
+            <p><strong>কিডস এর জন্য উপযোগী:</strong> <span id="forKids"></span></p>
+            <p><strong>প্রাইভেসি স্ট্যাটাস:</strong> <span id="privacyStatus"></span></p>
+            <p><strong>লাইকড কন্টেন্ট:</strong> <span id="licensedContent"></span></p>
+            <p><strong>লিসেন্স:</strong> <span id="licensed"></span></p>
+            <p><strong>এম্বেড অনুমতি:</strong> <span id="isEmbedAllowed"></span></p>
+            <p><strong>ক্যাপশন:</strong> <span id="caption"></span></p>
+            <p><strong>দেশীয় নিষেধাজ্ঞা:</strong> <span id="countryRestriction"></span></p>
+            <p><strong>কপিরাইট মুক্ত:</strong> <span id="copyrightFree"></span></p>
+            <p><strong>এজ রেস্ট্রিকশন:</strong> <span id="ageRestricted"></span></p>
+            <p><strong>ভিডিও ক্যাটেগরি:</strong> <span id="videoCategory"></span></p>
+
+            <!-- চ্যানেল তথ্য -->
+            <h2>চ্যানেল তথ্য</h2>
+            <p><strong>চ্যানেলের শিরোনাম:</strong> <span id="channelTitle"></span> <span class="copy-icon" data-copy="#channelTitle">📋</span></p>
+            <p><strong>চ্যানেল আইডি:</strong> <span id="channelId"></span> <span class="copy-icon" data-copy="#channelId">📋</span></p>
+            <p><strong>চ্যানেল বিবরণ:</strong> <span id="channelDescription"></span> <span class="copy-icon" data-copy="#channelDescription">📋</span></p>
+            <p><strong>চ্যানেল কিওয়ার্ড:</strong> <span id="channelKeyword"></span></p>
+            <p><strong>কাস্টম URL:</strong> <span id="customUrl"></span></p>
+            <p><strong>দেশ:</strong> <span id="country"></span></p>
+            <p><strong>ভিডিও সংখ্যা:</strong> <span id="videosCount"></span></p>
+            <p><strong>সাবস্ক্রাইবার সংখ্যা:</strong> <span id="subscribersCount"></span></p>
+            <p><strong>মোট ভিউ সংখ্যা:</strong> <span id="totalViews"></span></p>
+            <img id="channelLogo" src="" alt="Channel Logo">
+            
+            <!-- SEO ট্যাগ & আয়ের হিসাব -->
+            <h2>SEO ট্যাগ সাজেশন</h2>
+            <p><span id="seoTags"></span></p>
+            <p><strong>আনুমানিক আয় (১K ভিউ প্রতি):</strong> <span id="earningEstimate"></span> USD</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
