@@ -10,10 +10,11 @@
 
 <body>
     <div class="container">
-        <h1>YouTube Video Metadata Extractor</h1>
+     <h1 class="fade-in">YouTube Video Metadata Extractor</h1>
+
         
         <!-- ভিডিও URL ইনপুট -->
-        <div class="input-container">
+        <div class="slide-in-right">
             <label for="videoUrl">ভিডিও URL:</label>
             <input type="text" id="videoUrl" placeholder="ভিডিও URL এখানে দিন">
             <button id="fetchInfo">তথ্য নিন</button>
@@ -45,16 +46,22 @@
             <p><strong>ট্যাগ:</strong> <span id="tags"></span></p>
             <p><strong>লাইভ স্ট্যাটাস:</strong> <span id="liveStatus"></span></p>
             <p><strong>ভিডিও স্ট্যাটাস:</strong> <span id="videoStatus"></span></p>
-            <p><strong>কিডস এর জন্য উপযোগী:</strong> <span id="forKids"></span></p>
+            <p><strong>শিশু এর জন্য উপযোগী:</strong> <span id="forKids"></span></p>
             <p><strong>প্রাইভেসি স্ট্যাটাস:</strong> <span id="privacyStatus"></span></p>
-            <p><strong>লাইকড কন্টেন্ট:</strong> <span id="licensedContent"></span></p>
-            <p><strong>লিসেন্স:</strong> <span id="licensed"></span></p>
+            <p><strong>লাইক কন্টেন্ট:</strong> <span id="licensedContent"></span></p>
+            <p><strong>লাইসেন্স:</strong> <span id="licensed"></span></p>
             <p><strong>এম্বেড অনুমতি:</strong> <span id="isEmbedAllowed"></span></p>
             <p><strong>ক্যাপশন:</strong> <span id="caption"></span></p>
             <p><strong>দেশীয় নিষেধাজ্ঞা:</strong> <span id="countryRestriction"></span></p>
             <p><strong>কপিরাইট মুক্ত:</strong> <span id="copyrightFree"></span></p>
-            <p><strong>এজ রেস্ট্রিকশন:</strong> <span id="ageRestricted"></span></p>
+            <p><strong>বয়স রেস্ট্রিকশন:</strong> <span id="ageRestricted"></span></p>
             <p><strong>ভিডিও ক্যাটেগরি:</strong> <span id="videoCategory"></span></p>
+ 
+            <!-- অতিরিক্ত তথ্য -->
+            <p><strong>কন্টেন্ট রেটিং:</strong> <span id="contentRating"></span></p>
+            <p><strong>কোয়ালিটি:</strong> <span id="definition"></span></p>
+            <p><strong>প্রক্ষেপণ:</strong> <span id="projection"></span></p>
+            <p><strong>মাত্রা:</strong> <span id="dimension"></span></p>
 
             <!-- চ্যানেল তথ্য -->
             <h2>চ্যানেল তথ্য</h2>
@@ -75,6 +82,19 @@
             <p><strong>আনুমানিক আয় (১K ভিউ প্রতি):</strong> <span id="earningEstimate"></span> USD</p>
         </div>
     </div>
+ 
+    <!-- ক্রেডিট ও সোশ্যাল -->
+    <footer class="fade-in">
+      <p>Made by <strong>Shohag Vai</strong> | A Product of <strong>FAKE TECH BD</strong></p>
+      <div class="social-links">
+        <a href="https://t.me/faketechbd" target="_blank" class="btn">টেলিগ্রাম</a>
+        <a href="https://youtube.com/@faketechbd" target="_blank" class="btn youtube">ইউটিউব</a>
+        <a href="mailto:shohagvaiiofc@gmail.com" class="btn">ইমেইল</a>
+      </div>
+    </footer>
+  </div>
+ 
+   <button id="copyButton" onclick="copyToClipboard()">কপি করুন</button>
 
     <script src="script.js"></script>
 </body>
